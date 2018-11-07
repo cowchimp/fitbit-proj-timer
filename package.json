@@ -1,0 +1,45 @@
+{
+  "name": "fitbit-proj-timer",
+  "description": "A FitbitOS app to quickly set a timer based on predefined durations",
+  "author": {
+    "name": "cowchimp",
+    "url": "http://blog.cowchimp.com"
+  },
+  "repository": "cowchimp/fitbit-proj-timer",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "@fitbit/sdk": "~1.0.4",
+    "@fitbit/sdk-cli": "^1.0.2",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.6.0"
+  },
+  "fitbit": {
+    "appUUID": "37aed32e-c239-4462-b28d-2111efc6818c",
+    "appType": "app",
+    "appDisplayName": "Project Timer",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#5BE37D",
+    "requestedPermissions": [],
+    "buildTargets": [
+      "meson"
+    ],
+    "i18n": {}
+  },
+  "scripts": {
+    "build": "fitbit-build",
+    "debug": "fitbit",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  },
+  "dependencies": {
+    "haptics": "^1.0.0"
+  }
+}
